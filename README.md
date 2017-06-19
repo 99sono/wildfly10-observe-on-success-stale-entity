@@ -1,8 +1,9 @@
 # wildfly10-observe-on-success-stale-entity
 
 ## Summary
-The issue is first described in, 
-https://stackoverflow.com/questions/42519720/wildfly-10-eclipselink-2-6-4-observesduring-transactionphase-after-succe .
+The issue is reported in jboss JIRA:
+https://issues.jboss.org/browse/WFLY-8954
+
 
 In wildfly 10, using eclipselink 2.6.4 as JPA implementation layer,   an application does some business logic, fires and event and handles the event with an on success observer, will suffer from the problem that the entities it handles are stale, for it seems that at this point in time, eclipselink has not yet been instructed to merge into the server session cache the modified entities, although the commit has already been published to the database.
 
