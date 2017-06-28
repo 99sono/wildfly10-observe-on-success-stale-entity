@@ -37,6 +37,20 @@
 			 <groupId>sample.wildfly</groupId>
 			<artifactId>wildfly-jta-commit-entities</artifactId>								
 		</dependency>
+        
+          <!--  Use this to debug eclipselink in wildfly 10 -->
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>eclipselink</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        
+        <!--  Use this to debug wildfly integration with eclipselink -->
+        <dependency>
+                <groupId>org.wildfly</groupId>
+                <artifactId>jipijapa-eclipselink</artifactId>                
+                <scope>provided</scope>
+            </dependency>
 	</dependencies>
 
 </project>
